@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="initialize()">
+    <input onchange="handleFileChange()" type="file" id="file-input">
+    <button>load</button>
+    <br>
+    <table border>
+        <td>
+            <pre>
+            <td id="headerRow">
+                <tr>
+                    <td id="offset-column" width="80">00000000</td>
+                    <td>
+                        <textarea spellcheck="false" id="editor-textarea" oninput="handleTextInput()" cols="48"></textarea>
+                    </td>
+                    <td width="160" id="ascii-column">.</td>
+                </tr>
+            </td>
+        </table>
+    <button onclick="saveFile()">save</button>
+    <script src="editor.js"></script>
+</body>
+
+</html>

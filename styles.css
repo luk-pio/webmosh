@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font: 1em/1em courier;
+}
+
+#m {
+    height: 1.5em;
+    resize: none;
+    overflow: hidden;
+}
+
+#t {
+    padding: 0 2px;
+}
+
+#w {
+    position: absolute;
+    opacity: .001;
+}
