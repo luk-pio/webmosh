@@ -1,27 +1,7 @@
-class WaveformVisualizer {
-  constructor(canvasId, audioFileInputId) {
-    this.audioFileInput = document.getElementById(audioFileInputId);
+export class WaveformVisualizer {
+  constructor(canvasId) {
     this.canvas = document.getElementById(canvasId);
     this.canvasContext = this.canvas.getContext("2d");
-    this.audioContext = new (window.AudioContext ||
-      window.webkitAudioContext)();
-    this.audioFileInput.addEventListener("change", (event) => {
-      this.loadAudio(event);
-    });
-  }
-
-  loadAudio(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.readAsArrayBuffer(file);
-
-    reader.onload = () => {
-      this.audioContext.decodeAudioData(reader.result, (buffer) => {
-        this.drawWaveform(buffer);
-      });
-    };
   }
 
   drawWaveform(audioBuffer) {
@@ -43,6 +23,3 @@ class WaveformVisualizer {
     this.canvasContext.stroke();
   }
 }
-
-// Usage:
-const visualizer = new WaveformVisualizer("waveformCanvas", 'audioFile');

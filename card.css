@@ -1,0 +1,70 @@
+:root {
+  --background: rgb(228, 232, 236);
+}
+body {
+  background: var(--background);
+  font-family: "Nunito Sans", sans-serif;
+}
+.main-heading {
+  margin-bottom: 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  padding: 2rem;
+  border-radius: 30px;
+  background: var(--background);
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 1rem 0 1rem
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  transform: scale(1);
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--background);
+  background: linear-gradient(
+    45deg,
+    rgb(228, 232, 236) 0%,
+    rgb(234 234 234) 100%
+  );
+  box-shadow: -2px -7px 10px #f1f1f1, 4px 6px 10px #d4d7da;
+  transition: all 0.3s;
+}
+
+button:active {
+  background: rgb(218, 221, 224);
+  box-shadow: -2px -7px 10px #d4d7da, 4px 6px 10px #f1f1f1,
+    inset -2px -7px 10px #f1f1f1, inset 4px 6px 10px #d4d7da;
+  transition: all 0.3s;
+  transform: scale(0.95);
+}
+
+button i {
+  font-size: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s;
+}
+
+button:active i {
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
