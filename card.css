@@ -5,6 +5,10 @@ body {
   background: var(--background);
   font-family: "Nunito Sans", sans-serif;
 }
+
+#audioFile {
+  margin: auto;
+}
 .main-heading {
   margin-bottom: 4rem;
 }
@@ -28,7 +32,7 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin: 1rem 0 1rem
+  margin: 1rem 0 1rem;
 }
 
 button {
